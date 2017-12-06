@@ -29,7 +29,7 @@ namespace vista
             dtgvPedido.Columns[1].Name = "Descripcion";
             dtgvPedido.Columns[2].Name = "ID Cliente";
             dtgvPedido.Columns[3].Name = "Nombre Cliente";
-            dtgvPedido.Columns[3].Name = "Rut Cliente";
+            dtgvPedido.Columns[4].Name = "Rut Cliente";
             string[] row = new string[] { "idpedido", "descripcion", "idcliente", "nombrecliente","rut" };
             pedido cliente = new pedido();
             pedidoDAO daoPedido = new pedidoDAO();

@@ -96,3 +96,4 @@ C:\Users\PC-Cristopher\Desktop\Examen-CSharp\Restaurante\vista\obj\Debug\vista.c
 C:\Users\PC-Cristopher\Desktop\Examen-CSharp\Restaurante\vista\obj\Debug\vista.csproj.CoreCompileInputs.cache
 C:\Users\PC-Cristopher\Desktop\Examen-CSharp\Restaurante\vista\obj\Debug\vista.exe
 C:\Users\PC-Cristopher\Desktop\Examen-CSharp\Restaurante\vista\obj\Debug\vista.pdb
+C:\Users\PC-Cristopher\Desktop\Examen-CSharp\Restaurante\vista\obj\Debug\vista.Venta.listarVenta.resources

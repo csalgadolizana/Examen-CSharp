@@ -16,13 +16,13 @@ namespace vista.Service_Venta_BackUp {
     public interface NewWebService {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/NewWebService/buscarVentaRequest", ReplyAction="http://Servicios/NewWebService/buscarVentaResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/NewWebService/crearVentaRequest", ReplyAction="http://Servicios/NewWebService/crearVentaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        vista.Service_Venta_BackUp.buscarVentaResponse buscarVenta(vista.Service_Venta_BackUp.buscarVentaRequest request);
+        vista.Service_Venta_BackUp.crearVentaResponse crearVenta(vista.Service_Venta_BackUp.crearVentaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/NewWebService/buscarVentaRequest", ReplyAction="http://Servicios/NewWebService/buscarVentaResponse")]
-        System.Threading.Tasks.Task<vista.Service_Venta_BackUp.buscarVentaResponse> buscarVentaAsync(vista.Service_Venta_BackUp.buscarVentaRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/NewWebService/crearVentaRequest", ReplyAction="http://Servicios/NewWebService/crearVentaResponse")]
+        System.Threading.Tasks.Task<vista.Service_Venta_BackUp.crearVentaResponse> crearVentaAsync(vista.Service_Venta_BackUp.crearVentaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/NewWebService/listarVentasRequest", ReplyAction="http://Servicios/NewWebService/listarVentasResponse")]
@@ -34,47 +34,67 @@ namespace vista.Service_Venta_BackUp {
         System.Threading.Tasks.Task<vista.Service_Venta_BackUp.listarVentasResponse> listarVentasAsync(vista.Service_Venta_BackUp.listarVentasRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/NewWebService/crearVentaRequest", ReplyAction="http://Servicios/NewWebService/crearVentaResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/NewWebService/buscarVentaRequest", ReplyAction="http://Servicios/NewWebService/buscarVentaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        vista.Service_Venta_BackUp.crearVentaResponse crearVenta(vista.Service_Venta_BackUp.crearVentaRequest request);
+        vista.Service_Venta_BackUp.buscarVentaResponse buscarVenta(vista.Service_Venta_BackUp.buscarVentaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/NewWebService/crearVentaRequest", ReplyAction="http://Servicios/NewWebService/crearVentaResponse")]
-        System.Threading.Tasks.Task<vista.Service_Venta_BackUp.crearVentaResponse> crearVentaAsync(vista.Service_Venta_BackUp.crearVentaRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://Servicios/NewWebService/buscarVentaRequest", ReplyAction="http://Servicios/NewWebService/buscarVentaResponse")]
+        System.Threading.Tasks.Task<vista.Service_Venta_BackUp.buscarVentaResponse> buscarVentaAsync(vista.Service_Venta_BackUp.buscarVentaRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarVenta", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class buscarVentaRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="crearVenta", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class crearVentaRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int id;
+        public int idd;
         
-        public buscarVentaRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int subtot;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int propin;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int total_r;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int pedido_id;
+        
+        public crearVentaRequest() {
         }
         
-        public buscarVentaRequest(int id) {
-            this.id = id;
+        public crearVentaRequest(int idd, int subtot, int propin, int total_r, int pedido_id) {
+            this.idd = idd;
+            this.subtot = subtot;
+            this.propin = propin;
+            this.total_r = total_r;
+            this.pedido_id = pedido_id;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarVentaResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class buscarVentaResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="crearVentaResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class crearVentaResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public buscarVentaResponse() {
+        public crearVentaResponse() {
         }
         
-        public buscarVentaResponse(int @return) {
+        public crearVentaResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -212,55 +232,35 @@ namespace vista.Service_Venta_BackUp {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="crearVenta", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class crearVentaRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarVenta", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class buscarVentaRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idd;
+        public int id;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int subtot;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int propin;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int total_r;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int pedido_id;
-        
-        public crearVentaRequest() {
+        public buscarVentaRequest() {
         }
         
-        public crearVentaRequest(int idd, int subtot, int propin, int total_r, int pedido_id) {
-            this.idd = idd;
-            this.subtot = subtot;
-            this.propin = propin;
-            this.total_r = total_r;
-            this.pedido_id = pedido_id;
+        public buscarVentaRequest(int id) {
+            this.id = id;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="crearVentaResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
-    public partial class crearVentaResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="buscarVentaResponse", WrapperNamespace="http://Servicios/", IsWrapped=true)]
+    public partial class buscarVentaResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://Servicios/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public crearVentaResponse() {
+        public buscarVentaResponse() {
         }
         
-        public crearVentaResponse(int @return) {
+        public buscarVentaResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -293,50 +293,6 @@ namespace vista.Service_Venta_BackUp {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        vista.Service_Venta_BackUp.buscarVentaResponse vista.Service_Venta_BackUp.NewWebService.buscarVenta(vista.Service_Venta_BackUp.buscarVentaRequest request) {
-            return base.Channel.buscarVenta(request);
-        }
-        
-        public int buscarVenta(int id) {
-            vista.Service_Venta_BackUp.buscarVentaRequest inValue = new vista.Service_Venta_BackUp.buscarVentaRequest();
-            inValue.id = id;
-            vista.Service_Venta_BackUp.buscarVentaResponse retVal = ((vista.Service_Venta_BackUp.NewWebService)(this)).buscarVenta(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<vista.Service_Venta_BackUp.buscarVentaResponse> vista.Service_Venta_BackUp.NewWebService.buscarVentaAsync(vista.Service_Venta_BackUp.buscarVentaRequest request) {
-            return base.Channel.buscarVentaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<vista.Service_Venta_BackUp.buscarVentaResponse> buscarVentaAsync(int id) {
-            vista.Service_Venta_BackUp.buscarVentaRequest inValue = new vista.Service_Venta_BackUp.buscarVentaRequest();
-            inValue.id = id;
-            return ((vista.Service_Venta_BackUp.NewWebService)(this)).buscarVentaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        vista.Service_Venta_BackUp.listarVentasResponse vista.Service_Venta_BackUp.NewWebService.listarVentas(vista.Service_Venta_BackUp.listarVentasRequest request) {
-            return base.Channel.listarVentas(request);
-        }
-        
-        public vista.Service_Venta_BackUp.ventasBackup[] listarVentas() {
-            vista.Service_Venta_BackUp.listarVentasRequest inValue = new vista.Service_Venta_BackUp.listarVentasRequest();
-            vista.Service_Venta_BackUp.listarVentasResponse retVal = ((vista.Service_Venta_BackUp.NewWebService)(this)).listarVentas(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<vista.Service_Venta_BackUp.listarVentasResponse> vista.Service_Venta_BackUp.NewWebService.listarVentasAsync(vista.Service_Venta_BackUp.listarVentasRequest request) {
-            return base.Channel.listarVentasAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<vista.Service_Venta_BackUp.listarVentasResponse> listarVentasAsync() {
-            vista.Service_Venta_BackUp.listarVentasRequest inValue = new vista.Service_Venta_BackUp.listarVentasRequest();
-            return ((vista.Service_Venta_BackUp.NewWebService)(this)).listarVentasAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         vista.Service_Venta_BackUp.crearVentaResponse vista.Service_Venta_BackUp.NewWebService.crearVenta(vista.Service_Venta_BackUp.crearVentaRequest request) {
             return base.Channel.crearVenta(request);
         }
@@ -365,6 +321,50 @@ namespace vista.Service_Venta_BackUp {
             inValue.total_r = total_r;
             inValue.pedido_id = pedido_id;
             return ((vista.Service_Venta_BackUp.NewWebService)(this)).crearVentaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        vista.Service_Venta_BackUp.listarVentasResponse vista.Service_Venta_BackUp.NewWebService.listarVentas(vista.Service_Venta_BackUp.listarVentasRequest request) {
+            return base.Channel.listarVentas(request);
+        }
+        
+        public vista.Service_Venta_BackUp.ventasBackup[] listarVentas() {
+            vista.Service_Venta_BackUp.listarVentasRequest inValue = new vista.Service_Venta_BackUp.listarVentasRequest();
+            vista.Service_Venta_BackUp.listarVentasResponse retVal = ((vista.Service_Venta_BackUp.NewWebService)(this)).listarVentas(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<vista.Service_Venta_BackUp.listarVentasResponse> vista.Service_Venta_BackUp.NewWebService.listarVentasAsync(vista.Service_Venta_BackUp.listarVentasRequest request) {
+            return base.Channel.listarVentasAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<vista.Service_Venta_BackUp.listarVentasResponse> listarVentasAsync() {
+            vista.Service_Venta_BackUp.listarVentasRequest inValue = new vista.Service_Venta_BackUp.listarVentasRequest();
+            return ((vista.Service_Venta_BackUp.NewWebService)(this)).listarVentasAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        vista.Service_Venta_BackUp.buscarVentaResponse vista.Service_Venta_BackUp.NewWebService.buscarVenta(vista.Service_Venta_BackUp.buscarVentaRequest request) {
+            return base.Channel.buscarVenta(request);
+        }
+        
+        public int buscarVenta(int id) {
+            vista.Service_Venta_BackUp.buscarVentaRequest inValue = new vista.Service_Venta_BackUp.buscarVentaRequest();
+            inValue.id = id;
+            vista.Service_Venta_BackUp.buscarVentaResponse retVal = ((vista.Service_Venta_BackUp.NewWebService)(this)).buscarVenta(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<vista.Service_Venta_BackUp.buscarVentaResponse> vista.Service_Venta_BackUp.NewWebService.buscarVentaAsync(vista.Service_Venta_BackUp.buscarVentaRequest request) {
+            return base.Channel.buscarVentaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<vista.Service_Venta_BackUp.buscarVentaResponse> buscarVentaAsync(int id) {
+            vista.Service_Venta_BackUp.buscarVentaRequest inValue = new vista.Service_Venta_BackUp.buscarVentaRequest();
+            inValue.id = id;
+            return ((vista.Service_Venta_BackUp.NewWebService)(this)).buscarVentaAsync(inValue);
         }
     }
 }

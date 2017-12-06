@@ -47,7 +47,7 @@ namespace vista
                 pedido = pedidoDAO.buscarPedido(int.Parse(txtId.Text));
                 if (pedido != null)
                 {
-                    txtId.Text = pedido.cliente_id.ToString();
+                    //txtId.Text = pedido.cliente_id.ToString();
                     txtDescripcion.Text = pedido.descripcion;
                     cboCliente.SelectedIndex = pedido.id_pedido - 1;
 

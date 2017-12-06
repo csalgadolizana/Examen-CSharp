@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using vista.Menu;
 using BibliotecaSQL;
+using vista.Venta;
 
 namespace vista
 {
@@ -43,14 +44,16 @@ namespace vista
             {
                 case 1:
                     pedidoToolStripMenuItem.Visible = false;
-                    ventaToolStripMenuItem.Visible = false;
+                    crearVentaToolStripMenuItem.Visible = false;
+                    listarVentasToolStripMenuItem.Visible = true;
                     menuToolStripMenuItem.Visible = true;
                     //btnBackup.Show();
                     imgBackup.Show();
                     break;
                 case 2:
                     pedidoToolStripMenuItem.Visible = true;
-                    ventaToolStripMenuItem.Visible = true;
+                    crearVentaToolStripMenuItem.Visible = true;
+                    listarVentasToolStripMenuItem.Visible = false;
                     menuToolStripMenuItem.Visible = false;
                     //btnBackup.Hide();
                     imgBackup.Hide();
@@ -187,16 +190,7 @@ namespace vista
 
         private void ventaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //agregarVenta pe = new agregarVenta();
-            //pe.Show();
-            //this.Dispose();
-            agregarVenta agregarVenta = new agregarVenta();
-            panel.Controls.Clear();
-            agregarVenta.TopLevel = false;
-            agregarVenta.Parent = panel;
-            agregarVenta.FormBorderStyle = FormBorderStyle.None;
-            agregarVenta.Dock = DockStyle.Fill;
-            agregarVenta.Show();
+
         }
 
         private void imgBackup_Click(object sender, EventArgs e)
@@ -220,6 +214,31 @@ namespace vista
                 }
             }
             MessageBox.Show("Fin del respado");
+        }
+
+        private void crearVentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //agregarVenta pe = new agregarVenta();
+            //pe.Show();
+            //this.Dispose();
+            agregarVenta agregarVenta = new agregarVenta();
+            panel.Controls.Clear();
+            agregarVenta.TopLevel = false;
+            agregarVenta.Parent = panel;
+            agregarVenta.FormBorderStyle = FormBorderStyle.None;
+            agregarVenta.Dock = DockStyle.Fill;
+            agregarVenta.Show();
+        }
+
+        private void listarVentasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            listarVenta agregarVenta = new listarVenta();
+            panel.Controls.Clear();
+            agregarVenta.TopLevel = false;
+            agregarVenta.Parent = panel;
+            agregarVenta.FormBorderStyle = FormBorderStyle.None;
+            agregarVenta.Dock = DockStyle.Fill;
+            agregarVenta.Show();
         }
     }
 }

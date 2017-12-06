@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://10.20.66.109:8080/Examen/NewWebService?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/Examen/NewWebService?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="NewWebService.xsd" MetadataType="Schema" ID="cef1c0aa-643f-415a-a529-3a1a4197579c" SourceId="1" SourceUrl="http://10.20.66.109:8080/Examen/NewWebService?xsd=1" />
-    <MetadataFile FileName="NewWebService.wsdl" MetadataType="Wsdl" ID="b09ce8cf-78bd-466b-b64e-0d906fdd6601" SourceId="1" SourceUrl="http://10.20.66.109:8080/Examen/NewWebService?WSDL" />
+    <MetadataFile FileName="NewWebService1.xsd" MetadataType="Schema" ID="66ec1833-d3d8-4445-b579-8b82638d09a7" SourceId="1" SourceUrl="http://localhost:8080/Examen/NewWebService?xsd=1" />
+    <MetadataFile FileName="NewWebService1.wsdl" MetadataType="Wsdl" ID="1009614f-219e-4c4d-999b-cdeb5450e6d3" SourceId="1" SourceUrl="http://localhost:8080/Examen/NewWebService?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

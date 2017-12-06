@@ -25,7 +25,7 @@ namespace vista
             dtgMenus.DefaultCellStyle.ForeColor = Color.Black;
             dtgMenus.ColumnCount = 3;
             dtgMenus.Columns[0].Name = "ID Menu";
-            dtgMenus.Columns[1].Name = "Direccion";
+            dtgMenus.Columns[1].Name = "Descripcion";
             dtgMenus.Columns[2].Name = "Precios";
             string[] row = new string[] { "id", "descripcion", "precio" };
             menu men = new menu();

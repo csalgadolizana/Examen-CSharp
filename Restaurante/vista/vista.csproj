@@ -129,6 +129,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Sesion.cs" />
+    <Compile Include="Venta\listarVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Venta\listarVenta.Designer.cs">
+      <DependentUpon>listarVenta.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Cliente\actualizarCliente.resx">
       <DependentUpon>actualizarCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -175,6 +181,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Venta\listarVenta.resx">
+      <DependentUpon>listarVenta.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -184,8 +193,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Service References\Service_Venta_BackUp\NewWebService.wsdl" />
-    <None Include="Service References\Service_Venta_BackUp\NewWebService.xsd">
+    <None Include="Service References\Service_Venta_BackUp\NewWebService1.wsdl" />
+    <None Include="Service References\Service_Venta_BackUp\NewWebService1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\Service_Venta_BackUp\vista.Service_Venta_BackUp.buscarVentaResponse.datasource">
